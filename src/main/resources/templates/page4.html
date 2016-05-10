@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Page 4: Calculation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+
+    <a href="/page1">Page1</a>
+    <a href="/page2">Page2</a>
+    <a href="/page3">Page3</a>
+    <a href="/page4">Page4</a>
+    <a href="/page5">Page5</a>
+    
+    <form action="#" th:action="@{/page4}" th:object="${calculationData}" method="post">
+    	<p>Calculation: <input type="text" th:field="*{calculation}" /></p>
+    	<table>
+	    	<tr>
+	    		<td th:if="${#fields.hasErrors('calculation')}" th:errors="*{calculation}">calculation Error</td>
+	    	</tr>
+    	</table>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+
+	<br/>
+    <p th:text="'basicData: ' + ${calculationData.basicData}" />
+    <p th:text="'forecast: ' + ${calculationData.forecast}" />
+    <p th:text="'networkAccess: ' + ${calculationData.networkAccess}" />
+    <p th:text="'calculation: ' + ${calculationData.calculation}" />
+    <p th:text="'results: ' + ${calculationData.results}" /> 
+        
+</body>
+</html>

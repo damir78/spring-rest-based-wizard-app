@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Calculation Data:</h1>
+	
+    <p th:text="'basicData: ' + ${calculationData.basicData}" />
+    <p th:text="'forecast: ' + ${calculationData.forecast}" />
+    <p th:text="'networkAccess: ' + ${calculationData.networkAccess}" />
+    <p th:text="'calculation: ' + ${calculationData.calculation}" />
+    <p th:text="'results: ' + ${calculationData.results}" />
+    
+</body>
+</html>
